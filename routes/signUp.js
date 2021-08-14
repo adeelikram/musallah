@@ -6,7 +6,7 @@ var mongo = require('../mongo');
 // mailer sender
 var mailer = require('../emailSender/emailVerifier');
 // router complete post request  
-router.post('/new', async function (req, res, next) {
+router.post('/signup', async function (req, res, next) {
     // get the post data
     var data = req.body;
     // get fname, lname, email, password

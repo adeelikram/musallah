@@ -19,5 +19,9 @@ app.use(require('./routes/verify'));
 app.use(require('./routes/login'));
 app.use(require('./routes/addMosque'));
 app.use(require('./routes/getMosque'));
+
+app.get('/', function (req, res) {
+    res.send('<center><h1>Welcome to Musallah App!</h1></center>');
+});
 // express listen
 app.listen(3000);
