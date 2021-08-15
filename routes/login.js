@@ -7,7 +7,6 @@ var mongo = require('../mongo');
 router.post('/login', async function (req, res, next) {
     // data from req body
     var data =req.body;
-    console.log(data.email)
     // mongo findone from users collection by email
     var user = await mongo.collection('users').findOne({ email: data.email });
     // if user is not found

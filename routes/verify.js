@@ -8,7 +8,6 @@ const { ObjectId } = require('mongodb');
 router.get('/verify/:id', async function (req, res, next) {
     // read the id from the url
     var id = req.params.id;
-    console.log(id)
     
     var data = await mongo.collection("users").findOneAndUpdate({ _id: ObjectId(id) }, { $set: { verified: true } });
     
